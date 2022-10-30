@@ -26,9 +26,10 @@ header, footer {
 header {
 text-align: center;
 }
+
 footer {
 text-align: start;
-min-height: 25vh;
+min-height: 30vh;
 }
 
 h1 {
@@ -80,13 +81,27 @@ main {
 
 #search-results div {
     border: 0px solid black;
-    background-image: linear-gradient(to top left, rgb(43, 40, 40) 0%, rgba(112, 112, 112, 0.8) 100%);
+    background-image: linear-gradient(to top left, rgb(43, 40, 40) 0%, rgba(112, 112, 112, 0.8) 40%);
     color: white;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 10px;
     border-radius: 25px;
     font-family: "EB Garamond", serif;
-    align-content: center;
-    max-width: 800px;
+    max-width: 700px;
+    
+}
 
+.block {
+  flex-direction: row;
+}
+
+.info {
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 }
