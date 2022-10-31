@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+:root {
+  --flashyText: rgb(255, 122, 50);
+  --darkerText: rgb(3, 1, 0);
+}
+
 body {
     margin: auto;
     padding: auto;
@@ -35,25 +40,27 @@ min-height: 30vh;
 h1 {
   display: inline-block;
   padding: 10px;
-  color: rgb(242, 89, 7);
-  font-size: 80px;
+  color: var(--flashyText);
+  font-size: 4em;
 }
 
 p {
-    font-size: 1.5em;
+    font-size: 1.75em;
     font-family: 'EB Garamond', serif;
+    color: var(--darkerText);
+
 }
 
 .card {
   padding: 30px;
   justify-content: center;
-  background-color: rgba(200, 200, 230, 0.5);
+  background-color: var(--flashyText);
 }
 
 #searchDiv {
     margin: 25px auto;
     border-radius: 70px 0px 70px 70px;
-    padding: 50px;
+    padding: 30px;
 }
 
 form {
@@ -81,27 +88,66 @@ main {
 
 #search-results div {
     border: 0px solid black;
-    background-image: linear-gradient(to top left, rgb(43, 40, 40) 0%, rgba(112, 112, 112, 0.8) 40%);
     color: white;
     margin: 30px auto;
     padding: 10px;
     border-radius: 25px;
     font-family: "EB Garamond", serif;
     max-width: 700px;
-    
+}
+
+#search-results h2 {
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5em;
+  font-weight: light;
+  color: white;
+  background-color: var(--darkerText);
 }
 
 .block {
   flex-direction: row;
+  background-image: linear-gradient(to top left, rgb(43, 40, 40) 0%, rgba(112, 112, 112, 0.8) 100%);
 }
 
-.info {
+.info p{
   flex-direction: column;
-  min-width: 500px;
+  color: rgb(249, 248, 248);
+  font-size: 1.25em;
 }
 
 .icon {
   width: 100px;
   height: 100px;
   margin: 10px;
+}
+
+#previousSearches {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 15px;
+  background-color: aliceblue;
+  color: black;
+  font-size: 1em;
+  justify-content: center;
+}
+
+
+
+#previousSearches, ul {
+  display: flex;
+  list-style: none;
+}
+
+.listItem {
+  margin: 10px auto;
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: var(--flashyText);
+  color: white;
+
 }
