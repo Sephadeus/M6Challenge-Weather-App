@@ -1,4 +1,5 @@
 const searchBtn = document.getElementById("searchBtn");
+const searchInputEl = document.querySelector('#search-input');
 const previousSearchesEl = document.getElementById("previousSearches");
 const monthKey = {
   01: "January",
@@ -24,7 +25,7 @@ searchBtn.addEventListener("click", citySearch);
 
 function citySearch(event) {
     event.preventDefault();
-    let cityInputVal = document.querySelector('#search-input').value;
+    let cityInputVal = searchInputEl.value;
 
     searchResults.innerHTML = ""; 
 
@@ -41,13 +42,21 @@ function citySearch(event) {
 var searchedFor = localStorage.getItem("cities");
 var savedCities = searchedFor.split(",");
 
-for (let i = 0; i < savedCities.length; i++) {
+for (let i = savedCities.length - 1; i > savedCities.length - 6; i--) {
   var listItem = document
   .createElement("li");
-  
+
   listItem.className = "listItem";
+  listItem.setAttribute("id", savedCities[i]);
   listItem.textContent = savedCities[i];
   previousSearchesEl.appendChild(listItem);
+  listItem.style.cursor = 'grab';
+  listItem.addEventListener("click", function(event){
+    event.preventDefault();
+    searchCity(event.target.id);
+    
+  })
+
 }
 
 

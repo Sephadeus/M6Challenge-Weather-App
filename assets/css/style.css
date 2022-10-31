@@ -33,8 +33,22 @@ text-align: center;
 }
 
 footer {
-text-align: start;
 min-height: 30vh;
+}
+
+footer a {
+  margin: auto;
+  padding: 10px;
+  font-size: 30px;
+  background-color: var(--flashyText);
+  color: white;
+  border-radius: 70px 0px 70px 70px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--flashyText);
+  background-color: white;
 }
 
 h1 {
