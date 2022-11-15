@@ -122,7 +122,7 @@ main {
 
 .block {
   flex-direction: row;
-  background-image: linear-gradient(to top left, rgb(43, 40, 40) 0%, rgba(112, 112, 112, 0.8) 100%);
+  background-image: linear-gradient(to top left, rgb(43, 40, 40) 0%, rgba(57, 189, 250, 0.8) 100%);
 }
 
 .info p{
